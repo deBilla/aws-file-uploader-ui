@@ -13,7 +13,7 @@ const UploaderForm = () => {
 
   const handleUpload = async () => {
     if (file && file.name && file.type) {
-      const response = await axios.post(process.env.WS_URL || '', {
+      const response = await axios.post(process.env.NEXT_PUBLIC_WS_URL || '', {
         fileName: file.name,
         fileType: file.type
       });
